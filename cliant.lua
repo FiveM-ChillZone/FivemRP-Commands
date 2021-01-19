@@ -10,22 +10,28 @@
 RegisterCommand("me", function(source, args)
     TriggerServerEvent('me', table.concat(args, " "))
 end)
+TriggerEvent( "chat:addSuggestion", "/me", "Whaet's your RP line 11? " )
+
 
 -- /do
 RegisterCommand("do", function(source, args) 
     TriggerServerEvent('do', table.concat(args, " "))
 end)
+TriggerEvent( "chat:addSuggestion", "/do", "this is in line 24? " )
+
 
 -- /OOC
 RegisterCommand("ooc", function(source, args) 
     TriggerServerEvent('ooc', table.concat(args, " "))
 end)
+TriggerEvent( "chat:addSuggestion", "/ooc", "it is fucked up line 30 " )
+
 
 -- /dv
 RegisterCommand( "dv", function()
     TriggerEvent( "deleteVehicle" )
 end, false )
-TriggerEvent( "chat:addSuggestion", "/dv", "don't abuse" )
+TriggerEvent( "chat:addSuggestion", "/dv", "Don't abuse, And make sure to finish With your RP first" )
 
 -- max distance from vehicle   
 local distanceToCheck = 5.0
